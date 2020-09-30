@@ -23,11 +23,11 @@ const browserSync = require("browser-sync");
 // let siteUrl = 'http://javascript-petricenco.host1670806.hostland.pro/';
 // let siteDir = '../javascript-petricenco/';
 
-// let siteUrl = 'http://zuccato.cf/';
-// let siteDir = '../bs-zuccato/';
+let siteUrl = 'http://zuccato.cf/';
+let siteDir = '../bs-zuccato/';
 
-const siteDir = '../bs-bunavestire/';
-const siteUrl = 'http://wp-bunavestire.host1670806.hostland.pro/';
+// const siteDir = '../bs-bunavestire/';
+// const siteUrl = 'http://wp-bunavestire.host1670806.hostland.pro/';
 
 //let siteDir = '../js-movies/';
 
