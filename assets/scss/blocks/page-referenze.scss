@@ -1,0 +1,44 @@
+.page-referenze__header {
+  padding: 18rem 1.5rem 9.5rem;
+  text-align: center;
+  @media screen and (max-width: 576px) {
+	padding: 8rem 1.5rem 9.5rem;
+  }
+  h1 {
+	margin-bottom: 40px;
+	font-family: GreyscaleBasic, sans-serif;
+	font-size: 6.4rem;
+	font-weight: normal;
+	letter-spacing: -0.01em;
+	color: $congressBlue;
+  }
+  p {
+	line-height: 1.4;
+  }
+}
+.page-referenze {
+  .referenze__wrap {
+	margin: 0 -2.3rem;
+	@media screen and (max-width: 768px) {
+	  display: flex;
+	}
+	@media screen and (max-width: 576px) {
+	  display: block;
+	  margin: 0;
+	}
+  }
+  .referenze__item {
+	flex-basis: calc(25% - 4.6rem);
+	margin: 0 2.3rem 68px;
+	@media screen and (max-width: 1200px) {
+	  flex-basis: calc(33% - 4.6rem);
+	}
+	@media screen and (max-width: 768px) {
+	  flex-basis: calc(50% - 4.6rem);
+	}
+	@media screen and (max-width: 576px) {
+	  margin: 0 auto 40px;
+	  max-width: 400px;
+	}
+  }
+}

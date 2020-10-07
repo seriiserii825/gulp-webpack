@@ -1,0 +1,63 @@
+.advantages {
+  margin-bottom: 145px;
+  @media screen and (max-width: 576px) {
+	margin-bottom: 45px;
+  }
+}
+.advantages__header {
+  margin-bottom: 55px;
+  text-align: center;
+}
+.advantages__title {
+  margin-bottom: 18px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: -0.01em;
+  color: $congressBlue;
+}
+.advantages__wrap {
+  padding: 96px 96px 19px;
+  color: white;
+  background-color: $congressBlue;
+  @media screen and (max-width: 576px) {
+	padding: 60px 30px;
+  }
+}
+.advantages__item {
+  margin-bottom: 64px;
+}
+.advantages__item-title {
+  margin-bottom: 42px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: -0.01em;
+  @media screen and (max-width: 576px) {
+	font-size: 36px;
+  }
+}
+.advantages__text {
+  column-count: 2;
+  column-gap: 66px;
+  @media screen and (max-width: 992px) {
+  	column-count: initial;
+  }
+  li {
+	position: relative;
+	margin-bottom: 12px;
+	padding-left: 11px;
+	line-height: 1.4;
+	letter-spacing: 0.1px;
+	&::before {
+	  content: '';
+	  position: absolute;
+	  top: 8px;
+	  left: 0;
+	  width: 5px;
+	  height: 5px;
+	  background-color: white;
+	  border-radius: 50%;
+	}
+  }
+}

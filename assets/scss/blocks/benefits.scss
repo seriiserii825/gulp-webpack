@@ -1,0 +1,77 @@
+.benefits {
+  padding-bottom: 85px;
+  padding-top: 20px;
+  background-color: $gallery;
+  @media screen and (max-width: 576px) {
+    padding-bottom: 40px;
+  }
+}
+.benefits__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  padding: 84px 47px 0;
+  justify-content: space-between;
+  background-color: white;
+  @media screen and (max-width: 576px) {
+    display: block;
+    padding: 60px 30px;
+  }
+}
+.benefits__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 44px;
+  padding-right: 2%;
+  padding-bottom: 38px;
+  width: 33.33%;
+  border-bottom: 1px solid $gallery;
+  @media screen and (max-width: 992px) {
+    width: 43%;
+  }
+  @media screen and (max-width: 576px) {
+    padding-right: 0;
+    width: auto;
+  }
+  &:nth-of-type(2n) {
+    @media screen and (max-width: 992px) {
+      padding-right: 0;
+    }
+    @media screen and (max-width: 576px) {
+      width: auto;
+    }
+  }
+  &:nth-of-type(3n) {
+    padding-right: 0;
+    @media screen and (max-width: 992px) {
+      padding-right: 2%;
+    }
+    @media screen and (max-width: 576px) {
+      padding-right: 0;
+    }
+  }
+  &:last-of-type {
+    border-bottom: none;
+  }
+  img {
+    position: relative;
+    top: -5px;
+    flex: 0 0 30px;
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+.benefits__content {
+  flex: 1;
+  p {
+    line-height: 1.5;
+  }
+}
+
+.benefits__title {
+  margin-bottom: 21px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: $congressBlue;
+}

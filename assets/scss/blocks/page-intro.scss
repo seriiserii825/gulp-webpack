@@ -1,0 +1,131 @@
+.page-intro {
+  position: relative;
+  height: 694px;
+  @media screen and (max-width: 768px) {
+	height: 400px;
+  }
+  &::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .4);
+	z-index: 3;
+	opacity: 0;
+	@media screen and (max-width: 992px) {
+	  opacity: 1;
+	}
+  }
+  img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 2;
+  }
+}
+.page-intro--applicazioni {
+  &__title {
+	position: absolute;
+	bottom: 7.9%;
+	right: 7.6%;
+	object-fit: cover;
+	font-family: GreyscaleBasic, sans-serif;
+	font-size: 39px;
+	line-height: 1.2;
+	font-weight: bold;
+	letter-spacing: .7px;
+	color: white;
+	z-index: 10;
+	@media screen and (max-width: 768px) {
+	  padding: 0 15px;
+	}
+	@media screen and (max-width: 576px) {
+	  bottom: 1%;
+	  line-height: 1;
+	}
+	br {
+	  @media screen and (max-width: 768px) {
+		display: none;
+	  }
+	}
+  }
+}
+.page-intro--applicazioni-single__title {
+  position: absolute;
+  bottom: 9%;
+  left: 5.9%;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 75px;
+  line-height: 1.2;
+  color: white;
+  z-index: 10;
+  @media screen and (max-width: 768px) {
+	padding: 0 15px;
+	left: 0;
+	font-size: 45px;
+  }
+}
+.page-intro--azienda {
+  height: 783px;
+  @media screen and (max-width: 576px) {
+	height: 500px;
+  }
+  img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+	z-index: 2;
+  }
+}
+.page-intro--azienda__title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 55px 100px 60px 67px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1.1;
+  letter-spacing: 0.4px;
+  color: white;
+  background-color: $congressBlue;
+  z-index: 10;
+  @media screen and (max-width: 576px) {
+	padding: 30px;
+	font-size: 18px;
+  }
+  strong {
+	font-weight: bold;
+  }
+  &::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -72px;
+	width: 72px;
+	height: 100%;
+	background-color: $flamingo;
+  }
+}
+.page-intro--darken {
+  position: relative;
+  &::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,.5) 80%);
+	z-index: 3;
+  }
+}

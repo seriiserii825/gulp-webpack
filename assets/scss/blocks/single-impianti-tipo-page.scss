@@ -1,0 +1,125 @@
+.single-impianti-tipo-page {
+  padding-top: 62px;
+  .breadcrumb {
+    margin-bottom: 88px;
+    @media screen and (max-width: 576px) {
+      margin-bottom: 55px;
+    }
+  }
+}
+.single-impianti-tipo-page__wrap {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 992px) {
+    display: block;
+  }
+}
+.single-impianti-tipo-page__content {
+  margin-bottom: 131px;
+  width: 50%;
+  @media screen and (max-width: 992px) {
+    width: auto;
+  }
+  @media screen and (max-width: 576px) {
+    margin-bottom: 60px;
+  }
+  h1 {
+    margin-bottom: 50px;
+    font-family: GreyscaleBasic, sans-serif;
+    font-size: 64px;
+    font-weight: normal;
+    letter-spacing: -0.01em;
+    color: $congressBlue;
+    @media screen and (max-width: 576px) {
+      font-size: 44px;
+    }
+  }
+  a {
+    color: $flamingo;
+	&:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin-bottom: 33px;
+    line-height: 1.4;
+    strong {
+      font-weight: bold;
+      color: $congressBlue;
+    }
+  }
+}
+.single-impianti-tipo-page__data {
+  width: 33.6%;
+  @media screen and (max-width: 1300px) {
+    width: 44%;
+  }
+  @media screen and (max-width: 992px) {
+    max-width: 552px;
+    width: auto;
+  }
+  .page-impianti-tipo-block__item {
+    padding: 75px 0 0;
+    width: auto;
+    @media screen and (max-width: 576px) {
+      padding: 75px 15px 15px;
+    }
+  }
+  .page-impianti-tipo-block__flex {
+    padding: 40px 46px 0;
+    background-color: white;
+    @media screen and (max-width: 576px) {
+      padding: 40px 40px 10px;
+    }
+    .page-impianti-tipo-block__tax-name {
+      color: $doveGray;
+    }
+    .page-impianti-tipo-block__tax-value {
+      color: $congressBlue;
+    }
+  }
+  .page-impianti-tipo-block__flex:first-of-type {
+    margin-bottom: -40px;
+	@media screen and (max-width: 576px) {
+      margin-bottom: 0;
+	}
+  }
+  .page-impianti-tipo-block__flex:last-of-type {
+    height: auto;
+  }
+}
+.single-impianti-tipo-page__link {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 54px;
+  padding: 21px 75px 14px 23px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 24px;
+  color: white;
+  background-color: $flamingo;
+  @media screen and (max-width: 576px) {
+    display: block;
+    margin: 0 auto 20px;
+    font-size: 18px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    width: 31px;
+    height: 38px;
+    background-image: url('../i/static/download-image.svg');
+    transform: scale(1);
+    transition: all .4s;
+  }
+  &:hover::after {
+    transform: scale(0.8);
+  }
+}
+.single-impianti-tipo-page__img {
+  margin-bottom: 30px;
+  img {
+    display: block;
+  }
+}

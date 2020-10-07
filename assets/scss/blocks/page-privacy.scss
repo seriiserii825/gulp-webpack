@@ -1,0 +1,35 @@
+.page-privacy {
+  padding-top: 13.6rem;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: #00478c;
+  }
+  h1 {
+    margin-bottom: 1.7rem;
+    font-family: GreyscaleBasic, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6.4rem;
+    letter-spacing: -0.01em;
+  }
+  a {
+    color: $flamingo;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 3.4rem;
+  }
+  
+  h3 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+  }
+}

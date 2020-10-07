@@ -1,0 +1,50 @@
+.applicazioni-banner {
+  padding: 79px 87px 70px;
+  color: white;
+  background-color: $congressBlue;
+  @media screen and (max-width: 992px) {
+    padding: 70px 30px;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 70px 15px;
+  }
+}
+.applicazioni-banner__item {
+  margin-bottom: 82px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.applicazioni-banner__title {
+  margin-bottom: 67px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 30px;
+  }
+}
+.applicazioni-banner__subtitle {
+  margin-bottom: 30px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 48px;
+  line-height: .9;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+  @media screen and (max-width: 992px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 576px) {
+    margin-bottom: 20px;
+  }
+  br {
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+.applicazioni-banner__text {
+  margin-bottom: 30px;
+  line-height: 1.4;
+}

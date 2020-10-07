@@ -1,0 +1,42 @@
+.partners-block {
+  margin-bottom: 150px;
+  @media screen and (max-width: 576px) {
+    margin-bottom: 50px;
+  }
+}
+.partners-block__title {
+  margin-bottom: 41px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: $congressBlue;
+  @media screen and (max-width: 576px) {
+    font-size: 38px;
+  }
+}
+.partners-block__wrap {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 1700px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media screen and (max-width: 576px) {
+    display: block;
+  }
+  a {
+    display: block;
+    opacity: .8;
+    transition: all .3s;
+    @media screen and (max-width: 576px) {
+      text-align: center;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    
+  }
+}

@@ -1,0 +1,194 @@
+.page-impianti-tipo__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 53px;
+  @media screen and (max-width: 1800px) {
+	padding: 0 30px;
+  }
+  @media screen and (max-width: 1130px) {
+	display: block;
+	margin-bottom: 100px;
+	padding: 0 15px;
+  }
+  @media screen and (max-width: 576px) {
+	margin-bottom: 60px;
+  }
+}
+.page-impianti-tipo__content {
+  padding-top: 326px;
+  padding-left: 112px;
+  order: 1;
+  @media screen and (max-width: 1800px) {
+	padding-top: 140px;
+	padding-left: 0;
+	width: 50%;
+  }
+  @media screen and (max-width: 1400px) {
+	padding-top: 60px;
+  }
+  @media screen and (max-width: 1130px) {
+	width: auto;
+  }
+  h1 {
+	margin-bottom: 38px;
+	font-family: GreyscaleBasic, sans-serif;
+	font-size: 64px;
+	font-weight: normal;
+	letter-spacing: -0.01em;
+	color: $congressBlue;
+	@media screen and (max-width: 1400px) {
+	  font-size: 44px;
+	}
+	@media screen and (max-width: 576px) {
+	  font-size: 38px;
+	}
+  }
+  p {
+	margin-bottom: 27px;
+	max-width: 600px;
+	line-height: 1.5;
+	@media screen and (max-width: 1130px) {
+	  max-width: initial;
+	}
+	strong {
+	  font-weight: normal;
+	  color: $congressBlue;
+	}
+  }
+}
+.page-impianti-tipo__img {
+  order: 2;
+  @media screen and (max-width: 1800px) {
+	width: 50%;
+  }
+  @media screen and (max-width: 1130px) {
+	width: auto;
+  }
+}
+.page-impianti-tipo-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+  @media screen and (max-width: 1700px) {
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  @media screen and (max-width: 1135px) {
+	display: block;
+  }
+  @media screen and (max-width: 576px) {
+	margin-bottom: 60px;
+  }
+}
+.page-impianti-tipo-block__item {
+  position: relative;
+  margin-bottom: -47px;
+  padding: 74px 46px 47px;
+  width: 33.4%;
+  text-align: center;
+  color: white;
+  background-color: $congressBlue;
+  @media screen and (max-width: 1700px) {
+	margin-bottom: 80px;
+	width: auto;
+	flex: 0 0 552px;
+  }
+  @media screen and (max-width: 1135px) {
+	margin: 0 auto 40px;
+	width: 552px;
+  }
+  @media screen and (max-width: 588px) {
+	max-width: 552px;
+	width: auto;
+  }
+  &::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background-color: white;
+	opacity: .4;
+  }
+  &:nth-of-type(2) {
+	.page-impianti-tipo-block__flex:first-of-type {
+	  margin-bottom: -29px;
+	  @media screen and (max-width: 588px) {
+		margin-bottom: 0;
+	  }
+	}
+  }
+}
+.page-impianti-tipo-block__title {
+  margin: 0 auto 35px;
+  max-width: 387px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: $flamingo;
+  @media screen and (max-width: 576px) {
+	font-size: 32px;
+  }
+}
+.page-impianti-tipo-block__tax-block {
+  margin-bottom: 28px;
+}
+.page-impianti-tipo-block__tax-block:nth-of-type(2) {
+  margin-bottom: 52px;
+}
+.page-impianti-tipo-block__tax-name {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.page-impianti-tipo-block__tax-value {
+  margin-bottom: 26px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  @media screen and (max-width: 576px) {
+	font-size: 16px;
+  }
+}
+.page-impianti-tipo-block__flex {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 588px) {
+	display: block;
+  }
+  &:last-of-type {
+	height: 156px;
+	@media screen and (max-width: 588px) {
+	  height: auto;
+	}
+	.page-impianti-tipo-block__flex-item {
+	  margin-bottom: 4px;
+	}
+  }
+}
+.page-impianti-tipo-block__flex-item {
+  margin-bottom: 13px;
+  width: 46%;
+  text-align: left;
+  @media screen and (max-width: 588px) {
+	width: auto;
+	text-align: center;
+  }
+  &:last-of-type {
+	padding-left: 7px;
+	width: 44%;
+	@media screen and (max-width: 588px) {
+	  padding-left: 0;
+	  width: auto;
+	}
+  }
+  .page-impianti-tipo-block__tax-name {
+	margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,111 @@
+.referenze {
+  position: relative;
+  background-color: $gallery;
+  .section-header {
+	margin-bottom: 65px;
+  }
+  &.referenze--quatro {
+	margin-bottom: 104px;
+	padding-top: 78px;
+	.section-header__subtitle {
+	  margin-bottom: 77px;
+	}
+	.referenze__item {
+	  @media screen and (min-width: 1800px) {
+		width: 23%;
+		margin-right: 2.6%;
+	  }
+	  &:nth-of-type(3n) {
+		@media screen and (min-width: 1800px) {
+		  margin-right: 2.6%;
+		}
+	  }
+	  &:nth-of-type(4n) {
+		@media screen and (min-width: 1800px) {
+		  margin-right: 0;
+		}
+	  }
+	}
+  }
+}
+.referenze__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  @media screen and (max-width: 1200px) {
+	justify-content: space-between;
+  }
+  @media screen and (max-width: 768px) {
+	display: block;
+  }
+}
+.referenze__item {
+  display: block;
+  margin-right: 3.3%;
+  margin-bottom: 68px;
+  width: 29.8%;
+  @media screen and (max-width: 1200px) {
+	margin-right: 0;
+	width: 48%;
+  }
+  @media screen and (max-width: 768px) {
+	margin: 0 auto 68px;
+	max-width: 400px;
+	width: auto;
+  }
+  &:nth-of-type(3n) {
+	//margin-right: 0;
+	@media screen and (max-width: 768px) {
+	  margin: 0 auto 68px;
+	}
+  }
+}
+.referenze__img {
+  position: relative;
+  height: 450px;
+  img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+  }
+}
+.referenze__content {
+  padding: 36px 26px 27px;
+  background-color: white;
+}
+.referenze__country {
+  margin-bottom: 14px;
+  font-weight: normal;
+  color: $congressBlue;
+  @media screen and (max-width: 576px) {
+	text-align: center;
+  }
+}
+.referenze__title {
+  margin-bottom: 13px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: $congressBlue;
+  @media screen and (max-width: 576px) {
+	font-size: 24px;
+	text-align: center;
+  }
+}
+.referenze__footer {
+  position: relative;
+  padding-top: 10px;
+  text-align: center;
+  z-index: 2;
+  @media screen and (max-width: 576px) {
+	padding-bottom: 40px;
+  }
+}
+.referenze__description {
+  @media screen and (max-width: 576px) {
+	text-align: center;
+  }
+}

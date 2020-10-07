@@ -1,0 +1,110 @@
+.gallery-block {
+  margin-bottom: 100px;
+  position: relative;
+  padding-top: 102px;
+  color: white;
+  background-color: $congressBlue;
+  @media screen and (max-width: 576px) {
+	margin-bottom: 20px;
+	padding-top: 60px;
+	padding-bottom: 30px;
+  }
+  &.gallery-block--referenze {
+	margin-bottom: 80px;
+	padding-bottom: 92px;
+	.gallery-block__item {
+	  margin-bottom: 53px;
+	}
+	.gallery-block__item-title {
+	  text-transform: initial;
+	}
+  }
+  & > img {
+	position: absolute;
+	top: 42%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 40%;
+	z-index: 2;
+	opacity: .4;
+	@media screen and (max-width: 576px) {
+	  display: none;
+	}
+  }
+}
+.gallery-block__title {
+  margin-bottom: 97px;
+  font-family: GreyscaleBasic, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: none;
+  @media screen and (max-width: 576px) {
+	margin-bottom: 40px;
+  }
+}
+.gallery-block__wrap {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1402px;
+  z-index: 3;
+  @media screen and (max-width: 576px) {
+	display: block;
+  }
+  
+}
+.gallery-block__item {
+  display: block;
+  margin-right: 5%;
+  margin-bottom: 93px;
+  width: 30%;
+  @media screen and (max-width: 992px) {
+	width: 47%;
+  }
+  @media screen and (max-width: 576px) {
+	margin-right: 0;
+	width: auto;
+  }
+  &:nth-of-type(2n) {
+	@media screen and (max-width: 992px) {
+	  margin-right: 0;
+	}
+  }
+  &:nth-of-type(3n) {
+	margin-right: 0;
+	@media screen and (max-width: 992px) {
+	  margin-right: 5%;
+	}
+	@media screen and (max-width: 576px) {
+	  margin-right: 0;
+	}
+  }
+}
+.gallery-block__img {
+  position: relative;
+  margin-bottom: 32px;
+  height: 311px;
+  img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+  }
+}
+.gallery-block__item-title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.gallery-block__text {
+  font-size: 15px;
+  line-height: 1.6;
+}
