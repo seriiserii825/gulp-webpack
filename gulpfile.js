@@ -24,7 +24,6 @@ const browserSync = require("browser-sync");
 // let siteDir = '../javascript-petricenco/';
 
 let siteUrl = 'http://zuccato.cf/';
-let siteDir = '../bs-zuccato/';
 
 // const siteDir = '../bs-bunavestire/';
 // const siteUrl = 'http://wp-bunavestire.host1670806.hostland.pro/';
@@ -78,16 +77,16 @@ let webpackConfig = {
 };
 
 gulp.task('webpack', function () {
-	return gulp.src(siteDir + 'assets/js/main.js')
+	return gulp.src('assets/js/src/main.js')
 		.pipe(webpack(webpackConfig))
-		.pipe(gulp.dest(siteDir + 'assets/js/'))
+		.pipe(gulp.dest('assets/js/dist/'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
 });
 
 gulp.task("scss", function () {
-	return gulp.src(siteDir + 'assets/scss/my.scss')
+	return gulp.src('assets/scss/my.scss')
 		// .pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(wait(500))
@@ -101,13 +100,13 @@ gulp.task("scss", function () {
 			cascade: false
 		}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest(siteDir + 'assets/css/'))
+		.pipe(gulp.dest('assets/css/'))
 		.pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task("watch", function () {
-	gulp.watch(siteDir + 'assets/scss/**/*.scss', gulp.series('scss'));
-	gulp.watch(siteDir + 'assets/js/modules/**/*.js', gulp.series('webpack'));
+	gulp.watch('assets/scss/**/*.scss', gulp.series('scss'));
+	gulp.watch('assets/js/src/**/*.js', gulp.series('webpack'));
 });
 
 gulp.task('browser-sync', function () {
@@ -116,7 +115,7 @@ gulp.task('browser-sync', function () {
 			target: siteUrl,
 			ws: true
 		},
-		reloadDelay: 1000
+		reloadDelay: 1500
 	});
 
 	// browserSync.init({
@@ -125,10 +124,10 @@ gulp.task('browser-sync', function () {
 	// 	},
 	// 	notify: true
 	// });
-	gulp.watch(siteDir + "**/*.html").on('change', browserSync.reload);
-	gulp.watch(siteDir + "**/*.php").on('change', browserSync.reload);
-	gulp.watch(siteDir + "**/*.css").on('change', browserSync.reload);
-	gulp.watch(siteDir + "**/*.js").on('change', browserSync.reload);
+	gulp.watch("**/*.html").on('change', browserSync.reload);
+	gulp.watch("**/*.php").on('change', browserSync.reload);
+	gulp.watch("**/*.css").on('change', browserSync.reload);
+	gulp.watch("**/*.js").on('change', browserSync.reload);
 });
 
 // gulp.task('default', gulp.series('browser-sync'));
