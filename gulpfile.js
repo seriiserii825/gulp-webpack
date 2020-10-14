@@ -5,6 +5,8 @@ const webpack = require("webpack-stream");
 const sass = require('gulp-sass');
 const autoprefixer = require("gulp-autoprefixer");
 const sourcemaps = require('gulp-sourcemaps');
+const plumber = require("gulp-plumber");
+const gcmq = require('gulp-group-css-media-queries');
 const wait = require('gulp-wait'), notify = require("gulp-notify");
 const browserSync = require("browser-sync");
 
@@ -87,7 +89,7 @@ gulp.task('webpack', function () {
 
 gulp.task("scss", function () {
 	return gulp.src('assets/scss/my.scss')
-		// .pipe(plumber())
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(wait(500))
 		.pipe(sass({
@@ -99,6 +101,7 @@ gulp.task("scss", function () {
 		.pipe(autoprefixer({
 			cascade: false
 		}))
+		.pipe(gcmq())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('assets/css/'))
 		.pipe(browserSync.reload({stream: true}));
