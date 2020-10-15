@@ -92,10 +92,7 @@ gulp.task("scss", function () {
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(wait(500))
-		.pipe(sass({
-			outputStyle: 'expanded',
-			allowEmpty: true
-		}).on('error', notify.onError(function (error) {
+		.pipe(sass().on('error', notify.onError(function (error) {
 			return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
 		})))
 		.pipe(autoprefixer({
