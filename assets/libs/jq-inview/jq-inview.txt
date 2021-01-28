@@ -1,0 +1,4 @@
+$('.journal-slider .each-slide img').inViewport(
+    function(){$(this).addClass("am-in-view");},
+    function(){$(this).removeClass("am-in-view");}
+);
