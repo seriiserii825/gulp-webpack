@@ -134,4 +134,36 @@ function get_full_lang()
     }
     return $text;
 }
-//add_filter( 'show_admin_bar', '__return_false' );
+function imgR($image_id, $width = '1920', $height = null, $class = '', $quality = '80', $image_small_id = null)
+{
+    if ($height) {
+        $sizes = 'w=' . $width . ' &h=' . $height . '';
+    } else {
+        $sizes = 'w=' . $width . '';
+    }
+    if (isset($image_small_id)) {
+        $img_small = $image_small_id;
+    } else {
+        $img_small = $image_id;
+    }
+?>
+    <picture>
+        <source srcset="<?php echo kama_thumb_src($sizes . ' &q=' . $quality . ' &attach_id=' . $image_id . ''); ?>" media="(min-width: 768px)">
+        <source srcset="<?php echo wp_get_attachment_image_url($image_id, 'tablet') ?>" media="(min-width: 400px)">
+        <img class="<?php echo $class; ?>" src="<?php echo wp_get_attachment_image_url($img_small, 'mobile'); ?>" alt="">
+    </picture>
+<?php
+}
+function wpassist_remove_block_library_css()
+{
+    wp_dequeue_style('wp-block-library');
+}
+add_action('wp_enqueue_scripts', 'wpassist_remove_block_library_css');
+add_filter('intermediate_image_sizes_advanced', 'true_remove_default_sizes');
+function true_remove_default_sizes($sizes)
+{
+    unset($sizes['medium']);
+    unset($sizes['large']);
+    return $sizes;
+}
+
