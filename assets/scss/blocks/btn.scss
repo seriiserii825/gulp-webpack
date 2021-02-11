@@ -1,0 +1,13 @@
+.btn {
+  padding: 2rem 4rem;
+  text-transform: uppercase;
+  color: $accent-light;
+  background-color: $accent-dark;
+  border: 1px solid $accent-dark;
+  transition: all .4s;
+  cursor: pointer;
+  &:hover {
+    color: $accent-dark;
+    background-color: $accent-light;
+  }
+}
