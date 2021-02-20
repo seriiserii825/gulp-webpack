@@ -15,6 +15,12 @@ function bsv_eccommerce_register_required_plugins() {
 			'force_activation' => true
 		),
 		array(
+			'name'             => 'Resmushit optimizer',
+			'slug'             => 'resmushit-image-optimizer',
+			'required'         => true,
+			'force_activation' => true
+		),
+		array(
 			'name'             => 'Classic Editor',
 			'slug'             => 'classic-editor',
 			'required'         => true,
