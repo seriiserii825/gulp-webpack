@@ -79,6 +79,10 @@ function bsv_eccommerce_register_required_plugins() {
 			'name'             => 'WC Fields Factory',
 			'slug'             => 'wc-fields-factory',
 		),
+		array(
+			'name'             => 'WC Limit Login',
+			'slug'             => 'wps-limit-login',
+		),
 	);
 	$config = array(
 		'id'           => 'bsv_eccommerce',
