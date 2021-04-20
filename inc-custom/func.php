@@ -149,8 +149,8 @@ function imgR($image_id, $width = '1920', $height = null, $class = '', $quality 
 ?>
     <picture>
         <source srcset="<?php echo kama_thumb_src($sizes . ' &q=' . $quality . ' &attach_id=' . $image_id . ''); ?>" media="(min-width: 768px)">
-        <source srcset="<?php echo wp_get_attachment_image_url($image_id, 'tablet') ?>" media="(min-width: 400px)">
-        <img class="<?php echo $class; ?>" src="<?php echo wp_get_attachment_image_url($img_small, 'mobile'); ?>" alt="">
+        <source srcset="<?php echo wp_get_attachment_image_url($image_id, 'medium') ?>" media="(min-width: 400px)">
+        <img class="<?php echo $class; ?>" src="<?php echo wp_get_attachment_image_url($img_small, 'medium'); ?>" alt="">
     </picture>
 <?php
 }
