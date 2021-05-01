@@ -149,75 +149,8 @@ function imgR($image_id, $width = '1920', $height = null, $class = '', $quality 
 ?>
     <picture>
         <source srcset="<?php echo kama_thumb_src($sizes . ' &q=' . $quality . ' &attach_id=' . $image_id . ''); ?>" media="(min-width: 768px)">
-        <source srcset="<?php echo wp_get_attachment_image_url($image_id, 'tablet') ?>" media="(min-width: 400px)">
-        <img class="<?php echo $class; ?>" src="<?php echo wp_get_attachment_image_url($img_small, 'mobile'); ?>" alt="">
+        <source srcset="<?php echo wp_get_attachment_image_url($image_id, 'medium') ?>" media="(min-width: 400px)">
+        <img class="<?php echo $class; ?>" src="<?php echo wp_get_attachment_image_url($img_small, 'medium'); ?>" alt="">
     </picture>
-<?php
-}
-function wpassist_remove_block_library_css()
-{
-    wp_dequeue_style('wp-block-library');
-}
-add_action('wp_enqueue_scripts', 'wpassist_remove_block_library_css');
-add_filter('intermediate_image_sizes_advanced', 'true_remove_default_sizes');
-function true_remove_default_sizes($sizes)
-{
-    unset($sizes['medium']);
-    unset($sizes['large']);
-    return $sizes;
-}
-
-/*
- * WordPress 5.6.1: Window Unload Error Final Fix
- */
-add_action('admin_print_footer_scripts', 'wp_561_window_unload_error_final_fix');
-function wp_561_window_unload_error_final_fix()
-{
-?>
-    <script>
-        jQuery(document).ready(function($) {
-
-            // Check screen
-            if (typeof window.wp.autosave === 'undefined')
-                return;
-
-            // Data Hack
-            var initialCompareData = {
-                post_title: $('#title').val() || '',
-                content: $('#content').val() || '',
-                excerpt: $('#excerpt').val() || ''
-            };
-
-            var initialCompareString = window.wp.autosave.getCompareString(initialCompareData);
-
-            // Fixed postChanged()
-            window.wp.autosave.server.postChanged = function() {
-
-                var changed = false;
-
-                // If there are TinyMCE instances, loop through them.
-                if (window.tinymce) {
-                    window.tinymce.each(['content', 'excerpt'], function(field) {
-                        var editor = window.tinymce.get(field);
-
-                        if ((editor && editor.isDirty()) || ($('#' + field).val() || '') !== initialCompareData[field]) {
-                            changed = true;
-                            return false;
-                        }
-
-                    });
-
-                    if (($('#title').val() || '') !== initialCompareData.post_title) {
-                        changed = true;
-                    }
-
-                    return changed;
-                }
-
-                return window.wp.autosave.getCompareString() !== initialCompareString;
-
-            }
-        });
-    </script>
 <?php
 }
